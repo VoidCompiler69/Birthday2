@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday! 🎀</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="sparkles" aria-hidden="true">✦　✧　♡　✦　✧　♡</div>
+  <button class="music-toggle" id="musicToggle" type="button" aria-label="Toggle background music">♫ <span>Music off</span></button>
+  <audio id="bgMusic" loop>
+    <source src="assets/music.mpeg" type="audio/mpeg">
+  </audio>
+
+  <main>
+    <!-- PAGE 1 -->
+    <section class="page active" id="welcome">
+      <div class="card intro-card">
+        <div class="sticker">🎀 SAWAAL KA JAVAB DE </div>
+        <p class="eyebrow">IMPORTANT BUSINESS</p>
+        <h1>Tujhe Yaad tha<br>Mera Birthday?</h1>
+        <p class="subtext">Sahi Sahi Bata de .</p>
+        <div class="button-row">
+          <button class="btn btn-primary" id="yesBtn">YES, obviously! 💗</button>
+          <button class="btn btn-soft" id="noBtn">Nope 🙈</button>
+        </div>
+        <p class="tiny-note">Sahi se Bata nahi toh Dekh liyo</p>
+      </div>
+    </section>
+
+    <!-- PAGE 2: NO -->
+    <section class="page" id="noPage">
+      <div class="card">
+        <div class="big-emoji">😤</div>
+        <p class="eyebrow">Mujhe  Pata Tha ?!</p>
+        <h1>Chal ek Aur Chance,<br>Try Krle Dubara</h1>
+        <p class="subtext">Akhir Bachpan se hai tu Mere Saath.  😌</p>
+        <button class="btn btn-primary" id="tryAgain">But Bura toh Laga tha mujhe  💞</button>
+      </div>
+    </section>
+
+    <!-- PAGE 3: CONFIRM -->
+    <section class="page" id="confirmPage">
+      <div class="card">
+        <div class="big-emoji">🧐</div>
+        <p class="eyebrow">CONFIRM BATA PAKKA</p>
+        <h1>Tujhe  REALLY<br>Yaad Tha Naa?</h1>
+        <p class="subtext">Chal jaldi se bata YAAD THA NAA.</p>
+        <div class="button-row">
+          <button class="btn btn-primary" id="confirmYes">YES, LET'S GO! ✨</button>
+          <button class="btn btn-soft" id="confirmNo">Wait… 😳</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 4: BIRTHDAY -->
+    <section class="page" id="birthdayPage">
+      <div class="birthday-wrap">
+        <div class="birthday-heading">
+          <p class="eyebrow">CHAL Le abb Khush Hoja  🎉</p>
+          <h1>Happy Birthday!</h1>
+          <p class="subtext">Happy Birthday To my bachpan ki aur EKLAUTI ladki Dost 💗</p>
+          <span class="handwritten">Insha Allah saari dua qubool ho teri . You will be successful in your life . Aur agli baar Yaad Rakhiyo.</span>
+        </div>
+
+        <div class="gallery-intro">
+          <h2>Kuch Yaade tere liye</h2>
+          <p>Itti hi photo hai mere pass achhi aur apni toh hai hi nahi saath me </p>
+        </div>
+        <div class="photo-pile-wrap">
+          <div class="photo-pile" id="photoDeck" aria-label="Birthday photo pile. Click the top photo to reveal the next one.">
+            <article class="photo-card active-card" tabindex="0" role="button" aria-label="Show next photo">
+              <img src="assets/img1.jpeg" alt="Birthday balloons">
+              <p>“Teeno me Sabse Chhoti BUT Sabse Badi 😅”</p>
+            </article>
+            <article class="photo-card" tabindex="0" role="button" aria-label="Show next photo">
+              <img src="assets/img2.jpeg" alt="Birthday celebration">
+              <p>“Mere Saath Nahi khichai thi GADDAR 😤”</p>
+            </article>
+            <article class="photo-card" tabindex="0" role="button" aria-label="Show next photo">
+              <img src="assets/img3.jpeg " alt="Birthday cake">
+              <p>“Teeno pyaare Hai🤭😇”</p>
+            </article>
+            <article class="photo-card" tabindex="0" role="button" aria-label="Show next photo">
+              <img src="assets/img4.jpeg" alt="Party lights">
+              <p>“Chalo Ek toh milli Saath me 😎 HANDSOME LAUNDA”</p>
+            </article>
+            <article class="photo-card" tabindex="0" role="button" aria-label="Show next photo">
+              <img src="assets/img5.jpeg" alt="Friends celebrating">
+              <p>“Iss Jahil ke saath bhi hai 🤬”</p>
+            </article>
+            <article class="photo-card" tabindex="0" role="button" aria-label="Show next photo">
+              <img src="assets/img6.jpeg" alt="Festive celebration">
+              <p>“The Best Photo I have 💖”</p>
+            </article>
+          </div>
+        </div>
+        
+
+        <div class="cake-invite">
+          <div class="mini-cake" aria-hidden="true"><span>🕯️</span>🎂</div>
+          <h2>Virtual Cake🎁🎂 </h2>
+          <p>Bas Itta hi bana paya mai .</p>
+          <button class="btn btn-primary" id="cakeBtn">Wapis chalte hai  🍰</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 5: FINAL -->
+    <section class="page" id="finalPage">
+      <div class="card final-card">
+        <div class="cake-art" aria-label="Birthday cake">🕯️<br>🎂</div>
+        <p class="eyebrow">MAKE A WISH</p>
+        <h1>😌Iss baar fir se <br>Door se hi Wish.😌</h1>
+        <p class="final-message">🤲Lekin Kya pata Agli baar yaa uske Baad Kabhi toh saath me manayenge tera Birthday InshaAllah 🤲</p>
+        <p class="handwritten">Chal abb bye bye Aur Happy Birthday! again 😇TO MY EKLAUTI BACHPAN KI MAHILA MITRA 😇</p>
+        <button class="btn btn-soft" id="restartBtn">Phir se Dekh sakti hai 😇↻</button>
+      </div>
+        <div class="footer-note">  </div>
+    </section>
+  </main>
+
+  <div class="photo-modal" id="photoModal" aria-hidden="true">
+    <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+    <button class="modal-arrow prev" id="prevPhoto" aria-label="Previous photo">‹</button>
+    <div class="modal-content">
+      <img id="modalImage" src="" alt="">
+      <p id="modalQuote"></p>
+      <span id="modalCount"></span>
+    </div>
+    <button class="modal-arrow next" id="nextPhoto" aria-label="Next photo">›</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
